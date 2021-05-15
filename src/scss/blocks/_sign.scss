@@ -1,0 +1,56 @@
+.sign {
+    overflow-x: hidden;
+    background-color: #495567;
+    padding: 54px 0;
+   
+}
+
+.sign__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url("../../img/signsh.png");
+        background-repeat: no-repeat;
+        right: -365px;
+        width: 1153px;
+        height: 160px;
+        bottom: -54px;
+    }
+}
+
+.sign__name {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: -2.14286px;
+    color: #FFF;
+    width: 320px;
+    margin-right: auto;
+}
+.sign__link {
+    margin-right: 18px;
+    display: inline-block;
+}
+@media screen and (max-width: $tablet) {
+    .sign {
+        margin: 0 auto;
+    }
+    .sign__container {
+        &::before {
+            right: auto;
+          
+        }
+    }
+    .sign__name {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 40px;
+    }
+    .sign__container {
+        flex-direction: column;
+    }
+}

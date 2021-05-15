@@ -1,0 +1,121 @@
+.guide {
+    padding-top: 160px;
+    margin-bottom: 200px
+}
+
+.guide__list {
+    @include reset-list;
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 974px;
+        height: 15px;
+        background-color: #E5ECF4;
+        top: -48px;
+        left: -180px;
+    }
+}
+.guide__list-item {
+    margin-right: 30px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url("../../img/scooter2.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -96px;
+        border-radius: 50%;
+        width: 96px;
+        height: 96px;
+        background-color: #FCB72B;
+    }
+    
+}
+.guide__list-item:nth-child(2)::before {
+   
+    background-image: url("../../img/phone.svg");
+}
+.guide__list-item:last-child {
+    margin-right: 0;
+    &::before {
+        background-image: url("../../img/scooter.svg");
+    }
+}
+.guide__list-name {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: #495567;
+}
+
+.guide__list-info {
+    width: 330px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+}
+
+@media screen and (max-width: $tablet) {
+    .guide__list {
+        flex-direction: column;
+        width: 573px;
+        margin: 0 auto;
+
+        &::before {
+            transform: rotate(-90deg);
+            top: -40px;
+            left: -440px;
+            z-index: -10;
+        }
+    }
+    .guide__list-item {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        
+        &::before {
+            top: auto;
+            left: auto;
+        }
+    }
+    .guide__list-words {
+        margin-left: 179px;
+    }
+    .guide__list-info {
+        width: auto;
+    }
+    
+}
+
+@media screen and (max-width: $mobile) {
+    .guide__list {
+        width: 311px;
+        &::before {
+            display: none;
+        }
+    }
+    .guide__list-item {
+        margin: 0;
+        flex-direction: column;
+    }
+    .guide__list-words {
+        margin: 0;
+        margin-top: 104px;
+    }
+    .guide__list-name {
+        font-size: 20px;
+        text-align: center;
+    }
+    .guide__list-info {
+        font-size: 15px;
+        width: 311px;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+}

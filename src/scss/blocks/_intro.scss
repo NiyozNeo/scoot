@@ -1,0 +1,175 @@
+.intro {
+    margin-top: 89px;
+    padding-top: 97px;
+    padding-bottom: 149px;
+    background-image: url("../../img/intro.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        background-image: url("../../img/intro2x.jpg");
+    }
+
+
+
+}
+
+.intro__container {
+    position: relative;
+
+    &::before {
+        content: '';
+        background-image: url("../../img/line.png");
+        position: absolute;
+        width: 447px;
+        height: 138px;
+        top: 225px;
+        right: 108px;
+    }
+
+    &::after {
+        content: '';
+        background-image: url("../../img/line.png");
+        position: absolute;
+        transform: rotate(-180deg);
+        width: 202px;
+        height: 15px;
+        left: -165px;
+    }
+}
+
+.intro__name {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 56px;
+    color: #FFF;
+    width: 500px;
+}
+
+.intro__info {
+    font-size: 15px;
+    color: #FFF;
+    width: 405px;
+    margin-left: 97px;
+    margin-bottom: 40px;
+    line-height: 25px;
+}
+
+.intro__link {
+    margin-left: 97px;
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFF;
+    padding: 15px 35px;
+    background-color: #FCB72B;
+    border: 3px solid #FCB72B;
+
+    &:hover {
+        color: #FCB72B;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .intro {
+        background-image: url("../../img/tabletintro.jpg");
+        width: 768px;
+        height: 650px;
+        margin-left: auto;
+        margin-right: auto;
+      
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+
+            background-image: url("../../img/tabletintro2x.jpg");
+        }
+    }
+
+    .intro__container {
+        display: flex;
+        flex-direction: column;
+        width: 573px;
+        margin: 0 auto;
+  
+        &::after {
+            display: none;
+        }
+        &::before {
+            left: -212px;
+            top: auto;
+            bottom: -150px;
+        }
+    }
+    .intro__name {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .intro__info  {
+        width: 573px;
+        margin-left: 0;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 25px;
+        margin-bottom: 32px;
+        margin-top: 24px;
+    }
+    .intro__link {
+        width: 180px;
+        align-items: center;
+        margin-top: 32px;
+        margin-left: 180px;
+    }
+    
+
+}
+
+@media screen and (max-width: $mobile) {
+    .intro {
+        width: 375px;
+        height: 650px;
+        background-image: url("../../img/intromobile.jpg");
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+
+            background-image: url("../../img/intromobile2x.jpg");
+        }
+    }
+    .intro__container {
+        
+        &::before {
+            bottom: -100px;
+            left: -340px;
+        }
+    }
+    .intro__name {
+        font-size: 40px;
+        width: 250px;
+        text-align: center;
+    }
+    .intro__info {
+        width: 280px;
+
+    }
+    .intro__link {
+        margin-left: 46px;
+        margin-top: 34px;
+    }
+}
