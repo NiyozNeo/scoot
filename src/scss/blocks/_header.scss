@@ -14,8 +14,12 @@
     font-family: 'Space Mono';
     font-weight: bold;
 }
-.header__nav-wrapper {
-    margin-left: auto;
+.header__logo {
+    margin-right: 59px;
+}
+
+.header__nav {
+  margin-right: 511px;
     
 }
 
@@ -43,6 +47,7 @@
     }
 }
 .header__button {
+    
     border-radius: 0;
     font-weight: bold;
     color: #fff;
@@ -55,6 +60,12 @@
     background-color: #fff;
     color: #FCB72B;
 }
+@media screen and (max-width: $tablet) {
+    .header__nav {
+        margin-right: 94px;
+    }
+}
+
 @media screen and (max-width: $mobile) {
     .header {
         height: 64px;
@@ -111,7 +122,10 @@
     .header__button {
         margin-top: 350px;
     }
-
+    .header__logo {
+       padding-right: 20px;
+      
+    }
     .header__nav-wrapper--active {
         display: block;
     }

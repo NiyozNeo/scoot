@@ -64,3 +64,21 @@
 .footer__list-item:last-child{
     margin-right: 0;
 }
+
+@media screen and (max-width: $mobile) {
+    .footer__container {
+        flex-direction: column;
+    }
+    .footer__nav {
+        margin: 0;
+        margin-top: 41px;
+        margin-bottom: 85px;
+        flex-direction: column;
+      
+    }
+    .footer__nav-item {
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+}

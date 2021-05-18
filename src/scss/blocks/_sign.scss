@@ -54,3 +54,16 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .sign__name {
+        width: 240px;
+        font-size: 32px;
+    }
+    .sign__apps {
+        display: flex;
+    }
+    .sign__container::before {
+        right: -355px;
+    }
+}

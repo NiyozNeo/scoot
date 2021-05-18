@@ -1,0 +1,132 @@
+.faqs__head {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    color: #495567;
+}
+
+.faqs__lists,
+.faqs__list {
+    @include reset-list;
+}
+
+.faqs__lists-item {
+    display: flex;
+    margin-bottom: 64px;
+}
+
+.faqs__item {
+    margin-bottom: 16px;
+}
+
+.faqs__list-head {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 40px;
+    color: #495567;
+    margin: 0;
+    width: 33%;
+}
+
+.faqs__detail {
+    background-color: #F2F5F9;
+
+    &:hover {
+        background-color: #FFF4DF;
+    }
+}
+
+.faqs__question {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+    width: 730px;
+    padding: 32px 334px 32px 40px;
+
+
+
+    &::after {
+        content: '';
+        background-image: url("../../img/detail.svg");
+        transform: rotate(-180deg);
+        width: 17px;
+        height: 11px;
+        position: absolute;
+        right: 40px;
+    }
+}
+
+.faqs__detail[open]>.faqs__question::after {
+    transform: rotate(0);
+}
+
+.faqs__answer {
+    width: 650px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #495567;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 32px;
+
+
+}
+
+@media screen and (max-width: $tablet) {
+    .faqs__lists-item {
+        flex-direction: column;
+    }
+
+    .faqs__list-head {
+        width: auto;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .faqs__question {
+        width: 689px;
+        &::after {
+            right: 72px;
+        }
+    }
+
+}
+
+@media screen and (max-width: $mobile) {
+    .faqs__question {
+        width: 251px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.803571px;
+        padding: 32px;
+        &::after {
+            right: 0;
+        }
+    }
+
+    .faqs__head {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .faqs__list-head {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .faqs__answer {
+        width: 251px;
+        padding-left: 32px;
+        padding-right: 28px;
+        padding-bottom: 32px;
+    }
+
+}

@@ -1,0 +1,70 @@
+.intro-about {
+    background-image: url("../../img/intro-about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1440px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 89px;
+    
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+
+        background-image: url("../../img/intro-about2x.jpg");
+    }
+}
+
+.intro-about__name {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: #FFF;
+    padding-top: 72px;
+}
+
+@media screen and (max-width: $tablet) {
+    .intro-about {
+        background-image: url("../../img/tabletaboutintro.jpg");
+        width: 768px;
+        
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+
+            background-image: url("../../img/tabletaboutintro2x.jpg");
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .intro-about {
+        background-image: url("../../img/mobileintroabout.jpg");
+        width: 375px;
+        margin-top: 64px;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+
+            background-image: url("../../img/mobileintroabout2x.jpg");
+        }
+    }
+    .intro-about__name {
+        width: 111px;
+        margin: 0 auto;
+    }
+}
